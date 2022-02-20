@@ -4,13 +4,49 @@
     box-sizing:border-box;
     margin: 0;
     padding: 0;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 body {
     font-family: 'Poppins', 'Segoe UI', monospace, sans-serif;
+    display:block;
+    background: teal;
 }
 
 nav {
     width: 100vw;
+    background-color: lightblue;
+    font-size: 20px;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly;
 }
+
+.welcome{
+    background-color: gray;
+}
+
+
+
+.projects-grid {
+    padding: 10px;
+    margin: 10px 10px 10px 10px;
+    border: 1px solid salmon  ;
+
+}
+
+.project-tile {
+    
+    height: 200px;
+    width: 200px;
+    background: white;
+    border: 1px solid red;
+}
+
+#projects{
+    background-color: lightgray;
+    max-width: 100%;
+    max-width: 100%;
+    display:-ms-grid;
+}
+
