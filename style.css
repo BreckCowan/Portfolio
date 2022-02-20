@@ -9,7 +9,7 @@
 
 body {
     font-family: 'Poppins', 'Segoe UI', monospace, sans-serif;
-    display:block;
+
     background: teal;
 }
 
@@ -29,24 +29,31 @@ nav {
 
 
 .projects-grid {
-    padding: 10px;
-    margin: 10px 10px 10px 10px;
-    border: 1px solid salmon  ;
 
 }
 
 .project-tile {
-    
-    height: 200px;
-    width: 200px;
-    background: white;
-    border: 1px solid red;
+
 }
 
 #projects{
-    background-color: lightgray;
-    max-width: 100%;
-    max-width: 100%;
-    display:-ms-grid;
+
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  justify-content: space-between;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 14px;
+  text-align: center;
+  height:300px;
+  width: 400px; 
+  margin: 10px 10px 10px 10px;
+}
