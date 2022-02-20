@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
 *{
-    box-sizing: border-box;
+    box-sizing:border-box;
     margin: 0;
     padding: 0;
+    border: 1px solid red;
 }
 
-#welcome-section{
-    color: blue;
+body {
+    font-family: 'Poppins', 'Segoe UI', monospace, sans-serif;
+}
+
+nav {
+    width: 100vw;
 }
