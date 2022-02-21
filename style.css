@@ -1,59 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-*{
-    box-sizing:border-box;
-    margin: 0;
-    padding: 0;
-    /* border: 1px solid red; */
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body {
-    font-family: 'Poppins', 'Segoe UI', monospace, sans-serif;
-
-    background: teal;
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
-nav {
-    width: 100vw;
-    background-color: lightblue;
-    font-size: 20px;
-    display:flex;
-    flex-direction: row;
-    justify-content:space-evenly;
+html {
+  box-sizing: border-box;
+
+  /* Set font size for easy rem calculations
+   * default document font size = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+  */
+  font-size: 100%;
+  scroll-behavior: smooth;
 }
 
-.welcome{
-    background-color: gray;
+/* A few media query to set some font sizes at different screen sizes.
+ * This helps automate a bit of responsiveness.
+ * The trick is to use the rem unit for size values, margin and padding.
+ * Because rem is relative to the document font size
+ * when we scale up or down the font size on the document
+ * it will affect all properties using rem units for the values.
+*/
+
+/* I am using the em unit for breakpoints
+ * The calculation is the following
+ * screen size divided by browser base font size
+ * As an example: a breakpoint at 980px
+ * 980px / 16px = 61.25em
+*/
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+  html {
+    font-size: 100%;
+  }
 }
 
-
-
-.projects-grid {
-
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 100%;
+  }
 }
 
-.project-tile {
-
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 50%;
+  }
 }
 
-#projects{
-
+header {
+  display: flex; 
+  font-weight:bold;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: lightblue;
+  color: white;
+  font-family: 'Exo 2', sans-serif;
+  padding: 1em;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  background-color: #2196F3;
-  justify-content: space-between;
-  padding: 10px;
+.nav {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  color: black;
+  background-color: lightblue;
+  padding-top: 10px;
 }
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 20px;
-  font-size: 14px;
-  text-align: center;
-  height:300px;
-  width: 400px; 
-  margin: 10px 10px 10px 10px;
+
+#logo-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  margin: 0 40px 0 40px;
+}
+
+#header-img {
+  height: 200px;
+  width: auto;
+  border-radius: 0%;
+  border-radius: 100%;
+}
+
+#welcome-section {
+  padding-top: 0px;
+  margin-top: 0px;
+  display: block;
+  height: 100vh;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+  body {
+    background-color: blue;
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  body {
+    background-color: olive;
+  }
 }
