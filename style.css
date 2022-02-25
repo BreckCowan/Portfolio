@@ -24,51 +24,29 @@
 html {
   box-sizing: border-box;
 
-  /* Set font size for easy rem calculations
-   * default document font size = 16px, 1rem = 16px, 100% = 16px
-   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
-  */
+
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
-/* A few media query to set some font sizes at different screen sizes.
- * This helps automate a bit of responsiveness.
- * The trick is to use the rem unit for size values, margin and padding.
- * Because rem is relative to the document font size
- * when we scale up or down the font size on the document
- * it will affect all properties using rem units for the values.
-*/
 
-/* I am using the em unit for breakpoints
- * The calculation is the following
- * screen size divided by browser base font size
- * As an example: a breakpoint at 980px
- * 980px / 16px = 61.25em
-*/
-
-/* 1200px / 16px = 75em */
 @media (max-width: 75em) {
   html {
-    font-size: 60%;
+    font-size: 70%;
   }
 }
 
-/* 980px / 16px = 61.25em */
 @media (max-width: 61.25em) {
   html {
-    font-size: 58%;
+    font-size: 80%;
   }
 }
 
-/* 460px / 16px = 28.75em */
 @media (max-width: 28.75em) {
   html {
-    font-size: 55%;
+    font-size: 90%;
   }
 }
-
-/* Base styles */
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -80,7 +58,8 @@ body {
 
 h1,
 h2 {
-  font-family: 'Raleway', sans-serif;
+  color: white;
+  font-family: 'Roboto', serif;
   font-weight: 700;
   text-align: center;
 }
@@ -107,11 +86,9 @@ img {
   width: 100%;
 }
 
-/* nav */
-
 .nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   position: fixed;
   top: 0;
   left: 0;
@@ -146,8 +123,6 @@ img {
   color: var(--main-blue);
 }
 
-/* Welcome section */
-
 .welcome-section {
   display: flex;
   flex-direction: column;
@@ -167,8 +142,6 @@ img {
   color: var(--main-wt-blue);
 }
 
-/* Projects section */
-
 .projects-section {
   text-align: center;
   padding: 10rem 2rem;
@@ -187,7 +160,6 @@ img {
   }
 }
 
-/* "Automagic" image grid using no media queries */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -260,8 +232,6 @@ img {
   transition: transform 0.3s ease-out;
 }
 
-/* Contact section */
-
 .contact-section {
   display: flex;
   flex-direction: column;
@@ -271,12 +241,26 @@ img {
   width: 100%;
   height: 80vh;
   padding: 0 2rem;
-  background: var(--main-wt-blue);
+  background-image: linear-gradient(1deg, var(--main-dk-blue) 0%, var(--main-blue) 100%);
 }
 
 .contact-section-header > h2 {
   font-size: 6rem;
-  color: var(--main-dk-blue)
+  color: white;
+}
+
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 10vh;
+  padding: 1rem 1rem 1rem 1rem;
+  margin: 1rem 10rem 10rem 10rem;
+}
+
+.form-group{
+  color: white;
+  padding-bottom: 10px;
 }
 
 @media (max-width: 28.75em) {
@@ -287,7 +271,7 @@ img {
 
 .contact-section-header > p {
   font-style: italic;
-  color: var(--main-dk-blue)
+  color: white;
 }
 
 .contact-links {
@@ -301,15 +285,14 @@ img {
 
 .contact-details {
   font-size: 2.4rem;
-  text-shadow: 2px 2px 1px var(--main-blue);
+  text-shadow: 1px 1px 1px var(--main-wt-blue);
   transition: transform 0.3s ease-out;
+  color: var(--main-blue);
 }
 
 .contact-details:hover {
   transform: translateY(8px);
 }
-
-/* Footer */
 
 footer {
   font-weight: 300;
