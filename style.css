@@ -1,20 +1,16 @@
-/* Custom properties/variables  */
+
 :root {
   --main-dk-blue: #03045E;
   --main-blue: #00B4D8;
   --main-lt-blue: #90E0EF;
   --main-wt-blue: #CAF0F8;
-
-
 }
 
-/* Base reset */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* box-sizing and font sizing */
 *,
 *::before,
 *::after {
@@ -24,11 +20,9 @@
 html {
   box-sizing: border-box;
 
-
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
-
 
 @media (max-width: 75em) {
   html {
@@ -88,7 +82,7 @@ img {
 
 .nav {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
@@ -101,6 +95,15 @@ img {
 .nav-list {
   display: flex;
   margin-right: 2rem;
+}
+
+#header{
+  margin-left: 2rem;
+  padding-top: 1rem;
+}
+
+#header-name{
+  color: var(--main-lt-blue);
 }
 
 @media (max-width: 28.75em) {
@@ -192,7 +195,7 @@ img {
 }
 
 .project:hover .code {
-  color: red;
+  color: var(--main-blue);
 }
 
 .project-image {
